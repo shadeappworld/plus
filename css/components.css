@@ -1,0 +1,232 @@
+body {
+    --taskbar-height: 30px;
+    --accent-color: #d02727;
+
+    @media (display-mode: window-controls-overlay) { 
+        --taskbar-height: env(titlebar-area-height, 30px);
+    }
+
+    &:not(:has(app-window.comments)) app-window.video {
+        height: calc(100% - var(--taskbar-height));
+    }
+
+    &:not(:has(app-window.list)) app-window:is(.video, .comments) {
+        width: 100%;
+    }
+}
+
+app-taskbar {
+    background: #222;
+    z-index: 999999;
+    --color: #eee;
+    --dark-images: 1;
+    height: var(--taskbar-height);
+    left: 0;
+    top: 0;
+
+    @media (display-mode: window-controls-overlay) { 
+        width: env(titlebar-area-width, 100%);
+        left: env(titlebar-area-x, 0);
+    }
+}
+
+app-window {
+    --maximized-top: var(--taskbar-height);
+    --titlebar-color: #111;
+    --titlebar-controls-color: #eee;
+    background: #222;
+    left: 20px;
+    top: 50px;
+    width: 50%;
+    height: calc(100% - 80px);
+
+    & iframe {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        box-sizing: border-box;
+    }
+
+    &[embed-fullscreen] {
+        top: 0px !important;
+        left: 0px !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1000000 !important;
+    }
+
+    &.video {
+        left: 0;
+        top: var(--taskbar-height);
+        width: calc(100% - 300px);
+        height: calc(calc(100% - 300px) - var(--taskbar-height));
+    
+        @media (max-width: 850px) {
+            &:not([titlebar-style="none"]){
+                width: 100%;
+            }
+        }
+    
+        @media (max-height: 750px) {
+            &:not([titlebar-style="none"]){
+                height: calc(100% - var(--taskbar-height));
+            }
+        }
+    }
+
+    &.list {
+        left: calc(100% - 300px);
+        width: 300px;
+        top: var(--taskbar-height);
+        height: calc(100% - var(--taskbar-height));
+
+        @media (max-width: 300px) {
+            width: 100%;
+        }
+    }
+
+    &.settings {
+        left: 30px;
+        top: calc(var(--taskbar-height) + 30px);
+        height: calc(100% - calc(var(--taskbar-height) + 60px));
+        width: calc(100% - 60px);
+
+        &[titlebar-style="none"] {
+            left: 0px;
+            top: var(--taskbar-height);
+            height: calc(100% - var(--taskbar-height));
+            width: 100%;
+        }
+    }
+
+    &.comments {
+        left: 0;
+        top: calc(calc(100% - 300px));
+        height: 300px;
+        width: calc(100% - 300px);
+    }
+}
+
+video-preview {
+    background: #222;
+    color: #eee;
+
+    &[hide] {
+        display: none;
+    }
+}
+
+body[dragging] app-window iframe {
+    pointer-events: none;
+}
+
+img.cursor {
+    position: fixed;
+    top: 200px;
+    left: 200px;
+    z-index: 1000010;
+    width: 32px;
+    transition-duration: 30ms;
+    pointer-events: none;
+}
+
+input, button, select {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	min-width: 40px;
+	border: none;
+	color: #fff;
+	box-sizing: border-box;
+	border-radius: 4px;
+	transition: 75ms;
+	accent-color: var(--accent-color);
+	background: #222;
+    box-sizing: border-box;
+
+    &:not([type="range"]) {
+    	padding: 8px;
+    }
+
+    &[type="color"] {
+        padding: 3px;
+    }
+
+    &[type="checkbox"] {
+        min-width: unset;
+        width: 30px;
+    }
+	
+	&:is(input):not([type]) { /* if text */
+		width: 200px;
+		outline: none;
+
+		&:focus{
+			border-bottom: 2px var(--accent-color) solid;
+		}
+	}
+
+	&:is([appearance="accent"]) {
+		background: var(--accent-color);
+	}
+}
+
+dialog {
+    position: fixed;
+    border-radius: 10px;
+    border: none;
+    height: min(400px, 70%);
+    overflow: hidden;
+    width: min(400px, 80%);
+    box-shadow: 4px 4px 6px black;
+    app-region: no-drag;
+
+    .content {
+        width: 100%;
+        height: calc(100% - 50px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 0px 0px 15px 0px;
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row-reverse;
+
+        & > button {
+            min-width: 60px;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+::selection {
+    background: var(--accent-color);
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+}

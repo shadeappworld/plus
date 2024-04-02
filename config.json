@@ -1,0 +1,171 @@
+{
+	"backend": [
+		{
+			"type": "text",
+			"default": "https://pipedapi.kavin.rocks",
+			"conf": "video-host",
+			"title": "Host url",
+			"description": "The host url is required by Video Backend"
+		}
+	],
+	"playing": [
+		{
+			"type": "text",
+			"default": 720,
+			"conf": "video-quality-limit",
+			"title": "Video Quality Limit",
+			"description": "Limit the quality of video"
+		},
+		{
+			"type": "text",
+			"default": 240,
+			"conf": "video-quality-limit-network-saving",
+			"title": "Video Quality Limit (Network Saving)",
+			"description": "Limit the quality of video"
+		},
+		{
+			"type": "text",
+			"default": 150,
+			"conf": "audio-quality-limit",
+			"title": "Video Quality Limit",
+			"description": "Limit the quality of audio"
+		},
+		{
+			"type": "text",
+			"default": 70,
+			"conf": "audio-quality-limit-network-saving",
+			"title": "Audio Quality Limit (Network Saving)",
+			"description": "Limit the quality of audio"
+		},
+		{
+			"type": "bool",
+			"default": 1,
+			"conf": "better-fullscreen",
+			"title": "Better Fullscreen",
+			"description": "Disable ESC key to prevent accidentally exits (You can still use ESC to exit, however you need to press and hold)"
+		},
+		{
+			"type": "bool",
+			"default": 1,
+			"conf": "gamepad-support",
+			"title": "Gamepad Support",
+			"description": "Control the website with a gamepad."
+		},
+		{
+			"type": "text",
+			"default": "ps4",
+			"conf": "gamepad-mapping",
+			"title": "Gamepad Mapping",
+			"description": "Use custom mapping for your unstandard gamepad. (Available values: ps4, sg103)"
+		},
+		{
+			"type": "bool",
+			"default": -1,
+			"conf": "use-custom-screen-config",
+			"title": "Force to use Custom Screen Config",
+			"description": "Custom screen configuration will be applied instead of Window Management API"
+		},
+		{
+			"type": "text",
+			"default": "[]",
+			"conf": "screen-config",
+			"title": "Screen Configuration",
+			"description": "Screen configuration for splited player"
+		},
+		{
+			"type": "text",
+			"default": 15,
+			"conf": "splited-player-fps",
+			"title": "Splited Player FPS",
+			"description": "Use custom fps to sync splited players"
+		}
+	],
+	"appearance": [
+		{
+			"type": "bool",
+			"default": -1,
+			"conf": "disable-windowed-mode",
+			"title": "Disable Windowed Mode (Really!?!)",
+			"description": "Disable windowed mode while MAIN GOAL OF CONCEPT DESIGN IS WINDOWED MODE?!?!?!"
+		},
+		{
+			"type": "color",
+			"default": "#d02727",
+			"conf": "accent-color",
+			"title": "Accent color",
+			"description": "The accent color will be used by controls",
+			"alternatives": [
+				{
+					"title": "Red",
+					"value": "#d02727"
+				},
+				{
+					"title": "Blue",
+					"value": "#0058b7"
+				},
+				{
+					"title": "Green",
+					"value": "#1bb700"
+				},
+				{
+					"title": "Turquoise",
+					"value": "#00b7b6"
+				},
+				{
+					"title": "Purple",
+					"value": "#b7006d"
+				}
+			]
+		},
+		{
+			"type": "bool",
+			"default": -1,
+			"conf": "floating-list",
+			"title": "Floating Playlist",
+			"description": "Always keep Playlist window on top while Player window is separate"
+		},
+		{
+			"type": "bool",
+			"default": 1,
+			"conf": "use-video-ratio",
+			"title": "Use Video Ratio on Player",
+			"description": "Use video ratio on Player Window while the window is separate"
+		},
+		{
+			"type": "bool",
+			"default": 0,
+			"conf": "left-win-controls",
+			"title": "Left Window Controls",
+			"description": "Use left window controls (like MacOS layout)",
+			"indeterminable": true
+		},
+		{
+			"type": "bool",
+			"default": -1,
+			"conf": "custom-background",
+			"title": "Custom Background",
+			"description": "Use custom background for DeskVideo background"
+		},
+		{
+			"type": "text",
+			"default": "",
+			"conf": "custom-background-data",
+			"title": "Custom Background Data",
+			"description": "Use custom background from URL or Unsplash. If you want to get random Unsplash Images, just write keyword(s). Use comma to write multiple keyword",
+			"alternatives": [
+				{
+					"value": "Nature"
+				},
+				{
+					"value": "Wild Life"
+				},
+				{
+					"value": "Landscape"
+				},
+				{
+					"value": "Cars"
+				}
+			]
+		}
+	]
+}
