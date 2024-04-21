@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body{
+background:#181c25;
+color: #fff;;
+font-family: 'Poppins', sans-serif;
+}
+
+img{
+border-radius:15px;
+width:150px;
+height:150px;
+}
+#card{
+width:155px;
+height:210px;
+padding:5px;
+margin:5px;
+border-radius:15px;
+box-shadow:1px 1px 5px 1px grey;
+background:#181c25;
+color: #fff;
+}
+#card p{margin:2px;margin-left:15px;}
+#song_results, #trending_songs, #trending_albums, #albums, #playlists, #charts{
+display:flex;
+overflow-x:auto;
+color: #fff;
+overflow-y:hidden;
+}
+#charts::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+    
+}
+#trending_songs::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+#trending_albums::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+#albums::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+#playlists::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+#song_results::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+#trending{
+margin-top:0;
+color: #fff;
+}
+#charts{
+margin-bottom:0;
+}
+a{text-decoration:none;color:#000000;}
+#search_box{
+width:90%;
+margin:10px;
+margin-top:-5px;
+height:40px;
+border-radius: 20px;
+border-color: #fff;
+color: #ffffff;
+font-size:1.0em;
+padding-left: 45px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: transparent;
+backdrop-filter: blur(3px); 
+}
+#search_box:focus{
+border:none;
+}
+#search div{
+display:flex;
+}
+#search span{
+position:absolute;
+left:25px;
+top:;
+padding:5;
+margin:5px;
+transform:scale(1.5);
+}
+
+#view_more{
+  height:150;
+  width:auto;
+  padding:10px;
+margin:5px;
+border:none;
+border-radius:15px;
+box-shadow:1px 1px 5px 1px grey;
+background:#181c25;
+color: #fff;;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

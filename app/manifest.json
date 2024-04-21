@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Shade App Plus",
+    "version": "1.0.0",
+    "description": "Meet Shade App Plus - our video streaming platform!",
+    "icons": {
+        "16": "app.jpg",
+        "32": "app.jpg",
+        "128": "app.jpg",
+        "144": "app.jpg",
+        "192": "app.jpg",
+        "512": "app.jpg"
+    },
+    "author": "Shade Software & malisipi",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Shade App Plus"
+    },
+    "side_panel": {
+        "default_path": "index.html"
+    },
+    "sidebar_action": {
+        "default_icon": "app.jpg",
+        "default_title": "Shade App Plus",
+        "default_panel": "index.html"
+    },
+    "permissions": [
+        "sidePanel"
+    ]
+}

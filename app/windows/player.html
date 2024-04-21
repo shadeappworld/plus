@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Player</title>
+		<script src="./js/player.js"></script>
+		<script src="../js/deskvideo-common.js"></script>
+		<script src="../js/backend-api.js"></script>
+		<script src="../js/thirdparty/image-to-base64.js"></script>
+		<script src="../js/thirdparty/idb-keyval.js"></script>
+		<script src="../js/thirdparty/hls.min.js"></script>
+		<script src="../js/storage.js"></script>
+		<link rel="stylesheet" href="./css/player.css">
+		<link rel="stylesheet" href="../css/general.css">
+		<link rel="stylesheet" href="../css/components.css">
+	</head>
+	<body>
+		<video autoplay></video>
+		<canvas></canvas>
+		<audio autoplay hidden></audio>
+		<img draggable="false" class="thumbnail" />
+		<div class="info">
+			<div class="name"></div>
+			<div class="author"></div>
+			<div class="followers"></div>
+			<button class="description">
+				<img class="fi" src="../assets/fluent-icons/info_16_regular.svg" draggable="false" alt="Description" />
+			</button>
+			<img draggable="false" class="author" alt="Author"/>
+		</div>
+		<div class="controls">
+			<div class="scroll-region">
+				<button class="previous">
+					<img draggable="false" class="fi" src="../assets/fluent-icons/arrow_previous_16_regular.svg"/>
+				</button>
+				<button class="play">
+					<img draggable="false" class="fi true" src="../assets/fluent-icons/pause_16_regular.svg"/>
+					<img draggable="false" class="fi false" src="../assets/fluent-icons/play_16_regular.svg"/>
+				</button>
+				<button class="next">
+					<img draggable="false" class="fi" src="../assets/fluent-icons/arrow_next_16_regular.svg"/>
+				</button>
+				<input type="range" class="time" min="0" max="1" value="0" step="1"></fluent-slider>
+				<button class="volume">
+					<img draggable="false" class="fi true" src="../assets/fluent-icons/speaker_mute_16_regular.svg"/>
+					<img draggable="false" class="fi false" src="../assets/fluent-icons/speaker_2_16_regular.svg"/>
+				</button>
+				<input type="range" class="volume" min="0" max="100" value="100" step="1"></fluent-slider>
+				<button class="playrate">
+					<img draggable="false" class="fi" src="../assets/fluent-icons/shifts_activity_16_regular.svg" />
+					<select>
+						<option value="0.25">0.25</fluent-option>
+						<option value="0.5">0.5</fluent-option>
+						<option value="0.75">0.75</fluent-option>
+						<option value="1" selected>1</fluent-option>
+						<option value="1.25">1.25</fluent-option>
+						<option value="1.5">1.5</fluent-option>
+						<option value="1.75">1.75</fluent-option>
+						<option value="2">2</fluent-option>
+						<option value="2.5">2.5</fluent-option>
+						<option value="3">3</fluent-option>
+					</select>
+				</button>
+				<button class="audios">
+					<img draggable="false" class="fi" src="../assets/fluent-icons/speaker_edit_16_regular.svg" />
+					<select></select>
+				</button>
+				<button class="videos">
+					<img draggable="false" class="fi" src="../assets/fluent-icons/video_clip_multiple_16_regular.svg" />
+					<select></select>
+				</button>
+				<button class="subtitles">
+					<img draggable="false" class="fi" src="../assets/fluent-icons/subtitles_16_regular.svg" />
+					<select></select>
+				</button>
+				<button class="audio-only">
+					<img draggable="false" class="fi true" src="../assets/fluent-icons/video_16_regular.svg"/>
+					<img draggable="false" class="fi false" src="../assets/fluent-icons/headset_16_regular.svg"/>
+				</button>
+				<button class="pip">
+					<img draggable="false" class="fi false" src="../assets/fluent-icons/picture_in_picture_enter_16_regular.svg"/>
+					<img draggable="false" class="fi true" src="../assets/fluent-icons/picture_in_picture_exit_16_regular.svg"/>
+				</button>
+				<button class="splited-playing">
+					<img draggable="false" class="fi false" src="../assets/fluent-icons/tv_16_regular.svg"/>
+					<img draggable="false" class="fi true" src="../assets/fluent-icons/share_screen_stop_16_regular.svg"/>
+				</button>
+				<button class="fullscreen">
+					<img draggable="false" class="fi false" src="../assets/fluent-icons/full_screen_maximize_16_regular.svg"/>
+					<img draggable="false" class="fi true" src="../assets/fluent-icons/full_screen_minimize_16_regular.svg"/>
+				</button>
+			</div>
+		</div>
+		<div class="extended-controls">
+			<button class="like">
+				<img draggable="false" class="fi false" src="../assets/fluent-icons/thumb_like_16_regular.svg"/>
+				<img draggable="false" class="fi true" src="../assets/fluent-icons/thumb_like_16_filled.svg"/>
+			</button>
+			<button class="comment">
+				<img draggable="false" class="fi" src="../assets/fluent-icons/comment_16_regular.svg"/>
+			</button>
+			<button class="list">
+				<img draggable="false" class="fi" src="../assets/fluent-icons/list_16_regular.svg"/>
+			</button>
+			<button class="share">
+				<img draggable="false" class="fi" src="../assets/fluent-icons/share_16_regular.svg"/>
+			</button>
+		</div>
+	</body>
+</html>

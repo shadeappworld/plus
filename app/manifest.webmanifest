@@ -1,0 +1,39 @@
+{
+  "short_name": "Shade App Plus",
+  "name": "Shade App Plus",
+  "icons": [
+    {
+      "src": "app.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "app.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./?pwa=true",
+  "background_color": "#222222",
+  "display": "standalone",
+  "scope": "./",
+  "theme_color": "#222222",
+  "shortcuts": [],
+  "description": "Shade App Plus",
+  "screenshots": [],
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "file_handlers": [
+    {
+      "action": "./windows/player.html?embed=false&external_file=true",
+      "name": "Video",
+      "accept": {
+        "video/mp4": [
+          ".mp4"
+        ]
+      },
+      "launch_type": "multiple-clients"
+    }
+  ]
+}
