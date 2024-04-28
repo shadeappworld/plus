@@ -56,10 +56,8 @@ body {
 object {
   width: 100%;
   position: fixed;
-  top: 0;
-  bottom: 45px;
+  bottom: 70px;
   height: 100%;
-  opacity: 95%;
 }
 
 #player {
