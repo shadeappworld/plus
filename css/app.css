@@ -56,8 +56,8 @@ body {
 object {
   width: 100%;
   position: fixed;
-  bottom: 70px;
-  height: 100%;
+  bottom: 90px;
+  height: 110%;
 }
 
 #player {
