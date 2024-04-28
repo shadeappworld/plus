@@ -10,14 +10,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background: transparent;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(10000px);
-  --surface: #141419;
-   --contrast: #1d1d24;
-   --hover: #ffffff08;
-   --gradient: linear-gradient(0deg, #14141900 0%, #141419cc 40%, #141419 100%);
-
+  background: #181c25;
   position: fixed;
   bottom: 0;
   width: 100%;
