@@ -1,14 +1,14 @@
 {
     "name": "Shade App Plus",
     "short_name": "Shade App",
-    "description": "Shade Music Plus - It's a new way of music!",
+    "description": "Your new entertainment app!",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#181c25",
     "theme_color": "#181c25",
     "icons": [
         {
-            "src": "music.png",
+            "src": "app.jpg",
             "sizes": "192x192",
             "type": "image/png"
         }
