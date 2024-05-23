@@ -1,4 +1,99 @@
+
 <!DOCTYPE html>
+<html>
+
+<head>
+  <html lang="en-us"></html> <meta charset="utf-8" />
+  <title>Shade Studio Pro</title>
+  <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+        .body {
+              background-image: url("https://www.wallpaperhub.app/_next/image?url=https%3A%2F%2Fcdn.wallpaperhub.app%2Fcloudcache%2F9%2F5%2F6%2F8%2F5%2F8%2F9568586208febf4a12a89e1e70b14de2054eea0a.jpg&w=750&q=75");
+        }
+    .circle-popup {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #e74c3c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    .chat-icon {
+    position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #e74c3c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 9999;
+      }
+
+    .popup-content {
+      position: fixed;
+            top: 0px;
+            left: 0%;
+            right: 10%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: block;
+            z-index: 99999;
+            border-radius: 0%
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      left: 50px
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      background-color: #e74c3c;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 0%;
+    }
+  </style>
+</head>
+
+<body>
+  
+    <div class="popup-content">
+              
+      <iframe id="popup-iframe" src="https://shadeappworld.github.io/plus/shade.html" draggable="true"></iframe>
+    
+    </div>
+ 
+  <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
+
+     
+</body>
+
+
+</html><!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
 <head>
